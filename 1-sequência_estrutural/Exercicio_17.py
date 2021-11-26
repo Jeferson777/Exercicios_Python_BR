@@ -38,4 +38,5 @@ litros_faltantes = litros_a_serem_usados % litros_por_lata
 numero_de_galoes = math.ceil(litros_faltantes / litros_por_galao)
 valor_com_galoes = numero_de_galoes * 25
 valor_total = valor_latas_tintas + valor_com_galoes
-print(f'Você deverá usar {numero_de_latas} lata(s) de 18 litros mais {numero_de_galoes} galão(s) de 3.6 litros, no valor de R${valor_total},00')
+print(f'Você deverá usar {numero_de_latas} lata(s) de 18 litros mais {numero_de_galoes} galão(s) de 3.6 litros, no valor'
+f' de R${valor_total},00')
