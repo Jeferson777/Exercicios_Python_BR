@@ -4,25 +4,22 @@ Considere que a cobertura da tinta é de 1 litro para cada 3 metros quadrados e 
 18 litros, que custam R$ 80,00. Informe ao usuário a quantidades de latas de tinta a serem compradas e o preço total.
 '''
 
-metro_quadrado = float(input("Informe a metragem: "))
+import math
 
-valor_lata_tinta = 80.00
-cobertura_lata_tinta = 3 * 18 # 54 metros
+area_a_ser_pintada = float(input('Informe a medida de area a ser pintada: '))
 
-if metro_quadrado <= cobertura_lata_tinta:
-    print(f'Latas a comprar: 01 unidade, Valor: {valor_lata_tinta}0')
-elif metro_quadrado > cobertura_lata_tinta and metro_quadrado <= cobertura_lata_tinta * 2:
-    print(f'Latas a comprar: 02 unidade, Valor: {valor_lata_tinta * 2}0')
-elif metro_quadrado > cobertura_lata_tinta * 2 and metro_quadrado <= cobertura_lata_tinta * 3:
-    print(f'Latas a comprar: 03 unidade, Valor: {valor_lata_tinta * 3}0')
-elif metro_quadrado > cobertura_lata_tinta * 3 and metro_quadrado <= cobertura_lata_tinta * 4:
-    print(f'Latas a comprar: 04 unidade, Valor: {valor_lata_tinta * 4}0')
-elif metro_quadrado > cobertura_lata_tinta * 4 and metro_quadrado <= cobertura_lata_tinta * 5:
-    print(f'Latas a comprar: 05 unidade, Valor: {valor_lata_tinta * 5}0')
-elif metro_quadrado > cobertura_lata_tinta * 5 and metro_quadrado <= cobertura_lata_tinta * 6:
-    print(f'Latas a comprar: 06 unidade, Valor: {valor_lata_tinta * 6}0')
-else:
-    print('Erro!')
+# Definindo a base para calculos:
+litros_por_metro = 3
+litros_a_serem_usados = area_a_ser_pintada / litros_por_metro
 
+# Calculo para latas de 18 litros:
+litros_por_lata = 18
+numero_de_latas = math.ceil(litros_a_serem_usados / litros_por_lata)
+valor_latas_tintas = numero_de_latas * 80
+print(f'Você deverá usar {numero_de_latas} latas de 18 litros, no valor de R${math.ceil(valor_latas_tintas)},00')
 
-
+# Calculo para latas de 3,6 litros:
+litros_por_galao = 3.6
+numero_de_galoes = math.ceil(litros_a_serem_usados / litros_por_galao)
+valor_galoes_tintas = numero_de_galoes * 25
+print(f'Você deverá usar {numero_de_galoes} latas de 3,6 litros, no valor de R${math.ceil(valor_galoes_tintas)},00')
