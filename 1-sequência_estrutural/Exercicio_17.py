@@ -12,7 +12,7 @@ de folga e sempre arredonde os valores para cima, isto é, considere latas cheia
 
 import math
 
-area_a_ser_pintada = 100 # float(input('Informe a medida de area a ser pintada: '))
+area_a_ser_pintada = float(input('Informe a medida de area a ser pintada: '))
 
 # Definindo a base para calculos:
 area_com_folga = area_a_ser_pintada * 1.1
