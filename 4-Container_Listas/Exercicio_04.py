@@ -10,7 +10,7 @@ consoantes = 'bcdfghjklmnpqrstvwxyz'
 consoantes = list(consoantes)
 filtro_consoante = []
 
-# Tratando os dados:
+# Tratando e filtrando dados:
 for caractere in animal:
     if caractere in consoantes:  # Filtrando caracteres.:
         filtro_consoante.append(caractere)  # Adicionando o filtro a uma lista.
